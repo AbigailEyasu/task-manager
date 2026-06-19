@@ -1,4 +1,21 @@
 [
-  "Study Docker",
-  "My first task"
+  {
+    "id": 1,
+    "title": "study docker",
+    "done": true
+  },
+  {
+    "id": 2,
+    "title": "push to git",
+    "done": true
+  },
+  {
+    "id": 3,
+    "done": false
+  },
+  {
+    "id": 4,
+    "title": "add --filter",
+    "done": false
+  }
 ]
