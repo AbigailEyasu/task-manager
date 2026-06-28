@@ -2,7 +2,6 @@ const fs = require('fs');
 
 // Load tasks from file
 const loadTasks = () => {
-  if (!fs.existsSync('tasks.json')) return [];
   const data = fs.readFileSync('tasks.json', 'utf-8');
   return JSON.parse(data);
 };
@@ -43,7 +42,7 @@ const listTasks = (filter) => {
 
   filteredTasks.forEach(task => {
     const status = task.done ? '✅' : '❌';
-    console.log(`${status} [${task.id}] ${task.title}`);  // ✅ fixed
+    console.log(`${status} [${task.id}] ${task.title}`);
   });
 };
 
@@ -54,9 +53,9 @@ const completeTask = (id) => {
   if (task) {
     task.done = true;
     saveTasks(tasks);
-    console.log(`Task ${id} marked as done!`);  // ✅ fixed
+    console.log(`Task ${id} marked as done!`);
   } else {
-    console.log(`Task ${id} not found`);         // ✅ fixed
+    console.log(`Task ${id} not found`);
   }
 };
 
@@ -65,11 +64,11 @@ const deleteTask = (id) => {
   const tasks = loadTasks();
   const filtered = tasks.filter(t => t.id !== parseInt(id));
   if (filtered.length === tasks.length) {
-    console.log(`Task ${id} not found`);   // ✅ fixed
+    console.log(`Task ${id} not found`);
     return;
   }
   saveTasks(filtered);
-  console.log(`Task ${id} deleted!`);     // ✅ fixed
+  console.log(`Task ${id} deleted!`);
 };
 
 // Read command from terminal
@@ -85,5 +84,5 @@ if (command === 'add') {
 } else if (command === 'delete') {
   deleteTask(argument);
 } else {
-  console.log('Commands: add "task" | list | done <id> | delete <id>');
+  console.log('Commands: add "task" | list | done <id>');
 }
