@@ -1,0 +1,56 @@
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-02T08:18:07.657Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-02T09:21:43.029Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-02T10:51:57.128Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-08T01:42:15.963Z"}
+{"level":"info","message":"GET /tasks/","timestamp":"2026-07-08T01:42:41.516Z"}
+{"level":"error","message":"GET ALL ERROR: \nInvalid `prisma.task.findMany()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:26:37\n\n  23 // GET all tasks\n  24 app.get('/tasks', async (req, res) => {\n  25   try {\n→ 26     const tasks = await prisma.task.findMany(\n","timestamp":"2026-07-08T01:42:41.811Z"}
+{"level":"info","message":"GET /tasks/4","timestamp":"2026-07-08T01:42:55.876Z"}
+{"level":"error","message":"GET BY ID ERROR: \nInvalid `prisma.task.findUnique()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:38:36\n\n  35 app.get('/tasks/:id', async (req, res) => {\n  36   try {\n  37     const { id } = req.params;\n→ 38     const task = await prisma.task.findUnique(\n","timestamp":"2026-07-08T01:42:55.927Z"}
+{"level":"info","message":"POST /tasks/","timestamp":"2026-07-08T01:43:11.088Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:56:36\n\n  53 try {\n  54   const { title } = req.body;\n  55   if (!title) return res.status(400).json({ error: 'Title is required' });\n→ 56   const task = await prisma.task.create(\n","timestamp":"2026-07-08T01:43:11.106Z"}
+{"level":"info","message":"POST /tasks/","timestamp":"2026-07-08T01:43:13.415Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:56:36\n\n  53 try {\n  54   const { title } = req.body;\n  55   if (!title) return res.status(400).json({ error: 'Title is required' });\n→ 56   const task = await prisma.task.create(\n","timestamp":"2026-07-08T01:43:13.422Z"}
+{"level":"info","message":"POST /tasks/","timestamp":"2026-07-08T01:44:35.003Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:56:36\n\n  53 try {\n  54   const { title } = req.body;\n  55   if (!title) return res.status(400).json({ error: 'Title is required' });\n→ 56   const task = await prisma.task.create(\n","timestamp":"2026-07-08T01:44:35.008Z"}
+{"level":"info","message":"POST /tasks/","timestamp":"2026-07-08T01:44:40.829Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:56:36\n\n  53 try {\n  54   const { title } = req.body;\n  55   if (!title) return res.status(400).json({ error: 'Title is required' });\n→ 56   const task = await prisma.task.create(\n","timestamp":"2026-07-08T01:44:40.836Z"}
+{"level":"info","message":"POST /tasks/","timestamp":"2026-07-08T01:44:43.411Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:56:36\n\n  53 try {\n  54   const { title } = req.body;\n  55   if (!title) return res.status(400).json({ error: 'Title is required' });\n→ 56   const task = await prisma.task.create(\n","timestamp":"2026-07-08T01:44:43.418Z"}
+{"level":"info","message":"POST /tasks/","timestamp":"2026-07-08T01:44:45.606Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:56:36\n\n  53 try {\n  54   const { title } = req.body;\n  55   if (!title) return res.status(400).json({ error: 'Title is required' });\n→ 56   const task = await prisma.task.create(\n","timestamp":"2026-07-08T01:44:45.612Z"}
+{"level":"info","message":"POST /tasks/","timestamp":"2026-07-08T01:44:47.337Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:56:36\n\n  53 try {\n  54   const { title } = req.body;\n  55   if (!title) return res.status(400).json({ error: 'Title is required' });\n→ 56   const task = await prisma.task.create(\n","timestamp":"2026-07-08T01:44:47.343Z"}
+{"level":"info","message":"POST /tasks/","timestamp":"2026-07-08T01:44:50.693Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:56:36\n\n  53 try {\n  54   const { title } = req.body;\n  55   if (!title) return res.status(400).json({ error: 'Title is required' });\n→ 56   const task = await prisma.task.create(\n","timestamp":"2026-07-08T01:44:50.699Z"}
+{"level":"info","message":"POST /tasks/","timestamp":"2026-07-08T01:44:53.826Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:56:36\n\n  53 try {\n  54   const { title } = req.body;\n  55   if (!title) return res.status(400).json({ error: 'Title is required' });\n→ 56   const task = await prisma.task.create(\n","timestamp":"2026-07-08T01:44:53.831Z"}
+{"level":"info","message":"GET /tasks/","timestamp":"2026-07-08T01:45:00.212Z"}
+{"level":"error","message":"GET ALL ERROR: \nInvalid `prisma.task.findMany()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:26:37\n\n  23 // GET all tasks\n  24 app.get('/tasks', async (req, res) => {\n  25   try {\n→ 26     const tasks = await prisma.task.findMany(\n","timestamp":"2026-07-08T01:45:00.217Z"}
+{"level":"info","message":"GET /tasks/","timestamp":"2026-07-08T01:45:02.784Z"}
+{"level":"error","message":"GET ALL ERROR: \nInvalid `prisma.task.findMany()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:26:37\n\n  23 // GET all tasks\n  24 app.get('/tasks', async (req, res) => {\n  25   try {\n→ 26     const tasks = await prisma.task.findMany(\n","timestamp":"2026-07-08T01:45:02.789Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T06:21:03.454Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T06:36:33.048Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T07:00:04.135Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T07:00:35.436Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T07:06:40.937Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T07:13:35.385Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T07:18:15.231Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T07:19:07.117Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T07:37:47.381Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T08:05:54.721Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T08:24:33.021Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T08:26:57.426Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T08:37:37.708Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T09:12:26.253Z"}
+{"level":"info","message":"GET /tasks/","timestamp":"2026-07-15T10:49:12.799Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-15T10:49:32.030Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-15T10:49:33.590Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-15T10:53:00.053Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-15T10:53:02.765Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-15T10:53:19.762Z"}
+{"level":"info","message":"POST /tasks","timestamp":"2026-07-15T10:54:49.251Z"}
+{"level":"info","message":"POST /tasks","timestamp":"2026-07-15T10:54:54.659Z"}
+{"level":"info","message":"POST /tasks","timestamp":"2026-07-15T10:55:16.432Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-15T10:55:25.649Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T11:49:20.938Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-15T11:50:06.339Z"}

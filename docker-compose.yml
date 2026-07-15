@@ -21,9 +21,17 @@ services:
       - "3000:3000"
     environment:
       DATABASE_URL: postgresql://postgres:password@db:5432/taskmanager
+      JWT_SECRET: mysecretkey123
     depends_on:
       db:
         condition: service_healthy
+
+  frontend:
+    build: ./client
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
 
 volumes:
   postgres_data:
