@@ -12,23 +12,40 @@ const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
+const TASK_SELECT = {
+  id: true,
+  title: true,
+  done: true,
+  priority: true,
+  createdAt: true,
+  userId: true
+};
+
 const app = express();
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json());
 app.use('/auth', createAuthRouter(prisma));
-app.get('/test', (req, res) => {
-  res.json({ message: 'Server is working!' });
-});
-// Log every request
+
 app.use((req, res, next) => {
   logger.info(`${req.method} ${req.url}`);
   next();
 });
 
-// GET all tasks
+app.get('/test', (req, res) => {
+  res.json({ message: 'NEW SERVER WITH PRIORITY!' });
+});
+
 app.get('/tasks', authenticateToken, async (req, res) => {
   try {
-    const tasks = await prisma.task.findMany();
+    const { done, priority } = req.query;
+    const filter = {};
+    if (done !== undefined) filter.done = done === 'true';
+    if (priority) filter.priority = priority;
+    const tasks = await prisma.task.findMany({
+      where: filter,
+      select: TASK_SELECT,
+      orderBy: { createdAt: 'desc' }
+    });
     res.json(tasks);
   } catch (error) {
     logger.error('GET ALL ERROR:', { message: error.message });
@@ -36,12 +53,12 @@ app.get('/tasks', authenticateToken, async (req, res) => {
   }
 });
 
-// GET task by ID
 app.get('/tasks/:id', authenticateToken, async (req, res) => {
   try {
     const { id } = req.params;
     const task = await prisma.task.findUnique({
-      where: { id: parseInt(id) }
+      where: { id: parseInt(id) },
+      select: TASK_SELECT
     });
     if (!task) {
       return res.status(404).json({ error: 'Task not found' });
@@ -53,13 +70,16 @@ app.get('/tasks/:id', authenticateToken, async (req, res) => {
   }
 });
 
-// POST create a task
 app.post('/tasks', authenticateToken, async (req, res) => {
   try {
-    const { title } = req.body;
+    const { title, priority = 'Medium' } = req.body;
     if (!title) return res.status(400).json({ error: 'Title is required' });
+    if (!['High', 'Medium', 'Low'].includes(priority)) {
+      return res.status(400).json({ error: 'Priority must be High, Medium or Low' });
+    }
     const task = await prisma.task.create({
-      data: { title }
+      data: { title, priority },
+      select: TASK_SELECT
     });
     res.status(201).json(task);
   } catch (error) {
@@ -68,14 +88,17 @@ app.post('/tasks', authenticateToken, async (req, res) => {
   }
 });
 
-// PUT update whole task
 app.put('/tasks/:id', authenticateToken, async (req, res) => {
   try {
     const { id } = req.params;
-    const { title, done } = req.body;
+    const { title, done, priority } = req.body;
+    if (priority && !['High', 'Medium', 'Low'].includes(priority)) {
+      return res.status(400).json({ error: 'Priority must be High, Medium or Low' });
+    }
     const task = await prisma.task.update({
       where: { id: parseInt(id) },
-      data: { title, done }
+      data: { title, done, priority },
+      select: TASK_SELECT
     });
     res.json(task);
   } catch (error) {
@@ -84,14 +107,17 @@ app.put('/tasks/:id', authenticateToken, async (req, res) => {
   }
 });
 
-// PATCH update specific fields
 app.patch('/tasks/:id', authenticateToken, async (req, res) => {
   try {
     const { id } = req.params;
-    const { done, title } = req.body;
+    const { done, title, priority } = req.body;
+    if (priority && !['High', 'Medium', 'Low'].includes(priority)) {
+      return res.status(400).json({ error: 'Priority must be High, Medium or Low' });
+    }
     const task = await prisma.task.update({
       where: { id: parseInt(id) },
-      data: { done, title }
+      data: { done, title, priority },
+      select: TASK_SELECT
     });
     res.json(task);
   } catch (error) {
@@ -100,7 +126,6 @@ app.patch('/tasks/:id', authenticateToken, async (req, res) => {
   }
 });
 
-// DELETE a task
 app.delete('/tasks/:id', authenticateToken, async (req, res) => {
   try {
     const { id } = req.params;

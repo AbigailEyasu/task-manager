@@ -54,3 +54,84 @@
 {"level":"info","message":"GET /tasks","timestamp":"2026-07-15T10:55:25.649Z"}
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-07-15T11:49:20.938Z"}
 {"level":"info","message":"GET /tasks","timestamp":"2026-07-15T11:50:06.339Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-16T07:05:23.297Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-16T07:41:46.546Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-16T07:53:23.181Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-16T07:54:50.924Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-16T08:26:20.564Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-16T08:58:10.738Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-16T09:07:34.383Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T00:17:38.027Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T00:26:31.992Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T00:45:21.420Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T00:48:29.309Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T00:50:01.421Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T00:55:15.272Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T00:58:31.783Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T01:01:33.736Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T01:03:53.794Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T01:04:52.044Z"}
+{"level":"info","message":"GET /test","timestamp":"2026-07-17T01:05:00.227Z"}
+{"level":"info","message":"POST /tasks","timestamp":"2026-07-17T01:05:27.318Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:80:36\n\n  77 if (!['High', 'Medium', 'Low'].includes(priority)) {\n  78   return res.status(400).json({ error: 'Priority must be High, Medium or Low' });\n  79 }\n→ 80 const task = await prisma.task.create(\n","timestamp":"2026-07-17T01:05:27.630Z"}
+{"level":"info","message":"POST /tasks","timestamp":"2026-07-17T01:05:32.644Z"}
+{"level":"error","message":"POST ERROR: \nInvalid `prisma.task.create()` invocation in\nC:\\Users\\Hp\\Desktop\\task-manager\\server.js:80:36\n\n  77 if (!['High', 'Medium', 'Low'].includes(priority)) {\n  78   return res.status(400).json({ error: 'Priority must be High, Medium or Low' });\n  79 }\n→ 80 const task = await prisma.task.create(\n","timestamp":"2026-07-17T01:05:32.653Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T01:11:34.879Z"}
+{"level":"info","message":"POST /tasks","timestamp":"2026-07-17T01:13:59.073Z"}
+{"level":"info","message":"GET /tasks?done=true","timestamp":"2026-07-17T01:15:15.024Z"}
+{"level":"info","message":"GET /tasks?done=true","timestamp":"2026-07-17T01:15:17.624Z"}
+{"level":"info","message":"GET /tasks?done=true%0A","timestamp":"2026-07-17T01:17:13.371Z"}
+{"level":"info","message":"GET /tasks?priority=High","timestamp":"2026-07-17T01:18:12.198Z"}
+{"level":"info","message":"GET /tasks?done=true","timestamp":"2026-07-17T01:18:41.836Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T01:33:24.178Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:34.309Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:34.322Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:43.332Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:43.337Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:44.629Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:44.634Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:45.503Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:45.508Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:46.510Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:33:46.515Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:44:34.917Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:44:34.921Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:44:58.993Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:44:58.997Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:44:59.937Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:44:59.942Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:45:01.637Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:45:01.641Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:45:02.613Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:45:02.617Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:05.729Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:05.732Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:06.984Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:06.989Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:08.251Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:08.255Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:09.148Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:09.152Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:09.887Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:09.892Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:18.388Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:18.392Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:24.058Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:24.061Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:25.056Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:46:25.060Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-07-17T01:48:03.005Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:48:13.377Z"}
+{"level":"info","message":"GET /tasks?priority=High","timestamp":"2026-07-17T01:49:40.152Z"}
+{"level":"info","message":"GET /tasks?priority=Medium","timestamp":"2026-07-17T01:49:44.357Z"}
+{"level":"info","message":"GET /tasks?priority=Low","timestamp":"2026-07-17T01:49:45.879Z"}
+{"level":"info","message":"GET /tasks?done=true","timestamp":"2026-07-17T01:49:47.816Z"}
+{"level":"info","message":"GET /tasks?done=false","timestamp":"2026-07-17T01:49:49.381Z"}
+{"level":"info","message":"GET /tasks","timestamp":"2026-07-17T01:49:51.989Z"}
+{"level":"info","message":"DELETE /tasks/79","timestamp":"2026-07-17T01:50:09.875Z"}
+{"level":"info","message":"DELETE /tasks/78","timestamp":"2026-07-17T01:50:10.624Z"}
+{"level":"info","message":"DELETE /tasks/77","timestamp":"2026-07-17T01:50:12.279Z"}
+{"level":"info","message":"DELETE /tasks/76","timestamp":"2026-07-17T01:50:13.703Z"}
+{"level":"info","message":"DELETE /tasks/75","timestamp":"2026-07-17T01:50:15.964Z"}
+{"level":"info","message":"DELETE /tasks/74","timestamp":"2026-07-17T01:50:16.784Z"}
+{"level":"info","message":"POST /tasks","timestamp":"2026-07-17T01:50:39.805Z"}
