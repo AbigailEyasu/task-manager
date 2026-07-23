@@ -1,17 +1,13 @@
 const request = require('supertest');
-const express = require('express');
+const app = require('./server');
 
-const app = express();
-app.use(express.json());
+describe('Auth', () => {
+  test('POST /auth/register creates a user', async () => {
+    const response = await request(app)
+      .post('/auth/register')
+      .send({ email: `test${Date.now()}@example.com`, password: 'password123' });
 
-app.get('/health', (req, res) => {
-  res.json({ status: 'ok' });
-});
-
-describe('Health Check', () => {
-  test('GET /health returns ok', async () => {
-    const response = await request(app).get('/health');
-    expect(response.statusCode).toBe(200);
-    expect(response.body.status).toBe('ok');
+    expect(response.statusCode).toBe(201);
+    expect(response.body.message).toBe('User created!');
   });
 });
