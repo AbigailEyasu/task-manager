@@ -225,6 +225,9 @@ const updatePriority = async (task, newPriority) => {
   priorityColor={priorityColor}
   styles={styles}
 />
+    </div>
+  );
+}
 
 const styles = {
   container: { maxWidth: '650px', margin: '0 auto', padding: '20px', fontFamily: 'Arial', backgroundColor: '#1a1a2e', minHeight: '100vh', color: '#fff' },
